@@ -6,7 +6,7 @@ const IndexPage = (props: any) => {
 
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <h1>Hello Next.js 👋 111</h1>
+      <h1>Hello Next.js 👋 1121</h1>
       <p>{props.msg}</p>
     </Layout>
   )
