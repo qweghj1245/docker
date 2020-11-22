@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t qweghj1245/docker-test -f ./next/Dockerfile.dev ./next
+
+script:
+  - docker run -e CI=true qweghj1245/dockerTest yarn test --coverage
+
+after_success:
+  - docker build -t qweghj1245/multi-next ./next
+  - docker build -t qweghj1245/multi-nginx ./nginx
+  - docker build -t qweghj1245/multi-nest ./nest
+
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  - docker push qweghj1245/multi-next
+  - docker push qweghj1245/multi-nest
+  - docker push qweghj1245/multi-nginx
