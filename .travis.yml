@@ -5,8 +5,8 @@ services:
 before_install:
   - docker build -t qweghj1245/docker-test -f ./next/Dockerfile.dev ./next
 
-script:
-  - docker run -e CI=true qweghj1245/docker-test yarn test --coverage
+# script:
+#   - docker run -e CI=true qweghj1245/docker-test yarn test --coverage
 
 after_success:
   - docker build -t qweghj1245/multi-next ./next
