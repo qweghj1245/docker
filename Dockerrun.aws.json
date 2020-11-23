@@ -2,7 +2,7 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "client",
+      "name": "next",
       "image": "qweghj1245/multi-next",
       "hostname": "next",
       "essential": false,
