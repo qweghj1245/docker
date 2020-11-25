@@ -16,7 +16,7 @@
       "memory": 128
     },
     {
-      "name": "nginx",
+      "name": "nginx_proxy",
       "image": "qweghj1245/multi-nginx",
       "hostname": "nginx",
       "essential": true,
