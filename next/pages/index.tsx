@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 const IndexPage = (props: any) => {
 
   useEffect(() => {
-    fetch("http://multidocker-env-1.eba-vfascr2i.ap-northeast-1.elasticbeanstalk.com/api/post")
+    fetch("/api/post")
       .then((res) => res.json())
       .then((res) => console.log(res));
   })
