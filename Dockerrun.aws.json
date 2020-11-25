@@ -19,7 +19,7 @@
       "name": "nginx",
       "image": "qweghj1245/multi-nginx",
       "hostname": "nginx",
-      "essential": false,
+      "essential": true,
       "portMappings": [
         {
           "hostPort": 80,
