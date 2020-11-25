@@ -11,7 +11,7 @@ const IndexPage = (props: any) => {
 }
 
 export async function getServerSideProps () {
-  const response = await fetch("http://nginx:80/api/post").then((res) => res.json());
+  const response = await fetch("http://localhost:80/api/post").then((res) => res.json());
   return {
     props: { response }
   }
