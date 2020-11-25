@@ -11,7 +11,7 @@ const IndexPage = (props: any) => {
 }
 
 export async function getServerSideProps () {
-  const response = await fetch("http://multidocker-env-1.eba-vfascr2i.ap-northeast-1.elasticbeanstalk.com/api/post").then((res) => res.json());
+  const response = await fetch("/api/post").then((res) => res.json());
   return {
     props: { response }
   }
