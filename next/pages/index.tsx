@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Layout from '../components/Layout';
 
 const IndexPage = (props: any) => {
-
+  console.log(props);
   useEffect(() => {
     fetch("/api/post")
       .then((res) => res.json())
@@ -18,7 +18,7 @@ const IndexPage = (props: any) => {
 }
 
 export async function getServerSideProps () {
-  const response = await fetch("http://multidocker-env-1.eba-vfascr2i.ap-northeast-1.elasticbeanstalk.com/api/post").then((res) => res.json());
+  const response = await fetch("http://172.31.0.0:80/api/post").then((res) => res.json());
   return {
     props: { ...response }
   }
